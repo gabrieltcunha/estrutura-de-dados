@@ -25,12 +25,16 @@ public class Principal{
     lista.addInicio("Rafael");
     lista.addInicio("cecilia");
     lista.addFinal("joaquim");
+    lista.addFinal("Maria");
+    lista.addFinal("carlos");
     lista.imprimeLista();
     lista.removeInicio();
     lista.imprimeLista();
     lista.removeFinal();
     lista.imprimeLista();
     lista.addMeio("gabriel", 2);
+    lista.imprimeLista();
+    lista.removeMeio(1);
     lista.imprimeLista();
 
 }

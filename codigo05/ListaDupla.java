@@ -124,4 +124,29 @@ public void addMeio(T dado, int posicao){
         tamanho ++;
         atualizaIndices();
     }
+
+public void removeMeio(int posicao){
+        if(posicao <= 0){
+            removeInicio();
+            return;
+        }
+        
+        if(posicao >= tamanho-1){
+            removeFinal();;
+            return;
+            }
+    
+        NoDuplo<T> aux = primeiroNo; 
+        
+        int i = 1;
+        while (i < posicao ) {
+            aux = aux.getProximoNo();
+            i++;
+        }
+        System.out.println("Dado: " + aux.getProximoNo().getDado() + " removido!");
+        aux.getProximoNo().getProximoNo().setAnteriorNo(aux);
+        aux.setProximoNo(aux.getProximoNo().getProximoNo());
+        tamanho --;
+        atualizaIndices();
+    }
 }
